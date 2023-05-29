@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP1.CrearCarroSUV"
+             Title="CrearCarroSUV">
+
+    <ContentPage.Content>
+        <Grid VerticalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Frame Grid.Row="0" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Label Text="CREAR NUEVO SUV" FontSize="34" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="1" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Label Text="Marca" />
+                    <Entry x:Name="MarcaBoxS" Placeholder="Escribir Marca" />
+
+                    <Label Text="Modelo" />
+                    <Entry x:Name="ModeloBoxS" Placeholder="Escribir Modelo" />
+
+                    <Label Text="Año" />
+                    <Entry x:Name="AnioBoxS" Placeholder="Escribir Año" Keyboard="Numeric"/>
+
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="2" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Label Text="Placa" />
+                    <Entry x:Name="PlacaBoxS"  Placeholder="Escribir No. de placa" />
+
+                    <Label Text="Velocidad Máxima" />
+                    <Entry x:Name="VelocidadMaxBoxS" Placeholder="Escribir la Velocidad Max" Keyboard="Numeric" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="3" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+
+                    <Label x:Name="Es4x4LabelS" Text="Es 4x4" />
+                    <Switch x:Name="Es4x4SwitchS" Toggled="Es4x4SwitchToggledS" />
+
+
+                    <Label Text="Capacidad de torque (NM)" />
+                    <Entry x:Name="TorqueBoxS" Placeholder="Escribir la capacidad en numeros" Keyboard="Numeric" />
+
+                </StackLayout>
+            </Frame>
+
+            <!-- Fila: Seleccionar color -->
+            <Frame Grid.Row="4" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Label Text="Selecciona un color:" />
+
+                    <Button Text="" BackgroundColor="Red" Clicked="ColorButtonClickedS" />
+                    <Button Text="" BackgroundColor="Green" Clicked="ColorButtonClickedS" />
+                    <Button Text="" BackgroundColor="Blue" Clicked="ColorButtonClickedS" />
+                    <Button Text="" BackgroundColor="Yellow" Clicked="ColorButtonClickedS" />
+                    <Button Text="" BackgroundColor="Orange" Clicked="ColorButtonClickedS" />
+                    <Button Text="" BackgroundColor="Purple" Clicked="ColorButtonClickedS" />
+
+                    <Label Text="Color seleccionado:" />
+                    <BoxView Color="{Binding SelectedColor}" WidthRequest="50" HeightRequest="50" />
+                    <Entry x:Name="ColorBoxS" IsReadOnly="True" />
+
+                </StackLayout>
+            </Frame>
+
+
+            <Frame Grid.Row="5" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Button x:Name="GuardarButtonS" Text="Guardar" Clicked="GuardarButtonClickedS" />
+                </StackLayout>
+            </Frame>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

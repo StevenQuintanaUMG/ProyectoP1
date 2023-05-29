@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP1.CrearCarro">
+
+
+    <StackLayout Padding="20" VerticalOptions="Center" Spacing="20" HorizontalOptions="Center">
+        <Label Text="POR FAVOR SELECCIONE EL TIPO DE CARRO QUE QUIERE CREAR" SemanticProperties.HeadingLevel="Level1" FontSize="32" HorizontalOptions="Center" />
+
+        <Grid Margin="0,40,0,0" HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Frame Padding="10" Grid.Column="0">
+                <Image Source="pickup.png" Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoToCrearCarroPickUp" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Frame>
+
+            <Frame Padding="10" Grid.Column="1">
+                <Image Source="sedan.png" Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoToCrearCarroSedan" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Frame>
+
+            <Frame Padding="10" Grid.Column="2">
+                <Image Source="suv.png" Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoToCrearCarroSUV" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Frame>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

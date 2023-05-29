@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP1.UsarPickUp"
+             Title="UsarPickUp">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label  Text="ID:" Grid.Row="0" FontSize="16" />
+        <Label x:Name="lblId" Grid.Row="0" Grid.Column="1" FontSize="16" />
+
+        <Label Text="Marca:" Grid.Row="1" FontSize="16"/>
+        <Label x:Name="lblMarca" Grid.Row="1" Grid.Column="1" FontSize="16"/>
+
+        <Label Text="Modelo:" Grid.Row="2" FontSize="16"/>
+        <Label x:Name="lblModelo" Grid.Row="2" Grid.Column="1" FontSize="16"/>
+
+        <Label Text="¿Es 4x4?:" Grid.Row="3" FontSize="16"/>
+        <Label x:Name="lblEs4x4" Grid.Row="3" Grid.Column="1" FontSize="16"/>
+
+        <Label Text="Cabina:" Grid.Row="4" FontSize="16"/>
+        <Label x:Name="lblCabina" Grid.Row="4" Grid.Column="1" FontSize="16"/>
+
+        <Label Text="Torque:" Grid.Row="5" FontSize="16"/>
+        <Label x:Name="lblTorque" Grid.Row="5" Grid.Column="1" FontSize="16"/>
+
+        <Label Text="Carga:" Grid.Row="6" FontSize="16"/>
+        <Label x:Name="lblCarga" Grid.Row="6" Grid.Column="1" FontSize="16"/>
+
+        <Label Text="¿Es Diesel?:" Grid.Row="7" FontSize="16"/>
+        <Label x:Name=" lblDiesel" Grid.Row="7" Grid.Column="1" FontSize="16"/>
+
+        <StackLayout Orientation="Horizontal" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3">
+            <Image Source="pickup.png" WidthRequest="600" HeightRequest="300" />
+
+            <StackLayout Orientation="Vertical">
+                <Button x:Name="ButtonAcelerarP" Text="Acelerar" Clicked="ButtonAcelerarClickP"/>
+                <Button x:Name="ButtonFrenarP" Text="Frenar"  Clicked="ButtonFrenarClickP"/>
+                <Button x:Name="ButtonBocinarP" Text="Tocar Bocina" Clicked="ButtonBocinaClickP"/>
+                <Button x:Name="ButtonEncenderP" Text="Encender" Clicked="ButtonEncenderClickP"/>
+                <Button x:Name="ButtonApagarP" Text="Apagar"  Clicked="ButtonApagarClickP" />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+
+
+</ContentPage>

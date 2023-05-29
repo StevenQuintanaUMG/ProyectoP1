@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP1.CrearCarroSedan"
+             Title="CrearCarroSedan">
+    
+    <ContentPage.Content>
+        <Grid VerticalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Frame Grid.Row="0" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Label Text="CREAR NUEVO SEDAN" FontSize="34" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="1" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Label Text="Marca" />
+                    <Entry x:Name="MarcaBoxSE" Placeholder="Escribir Marca" />
+
+                    <Label Text="Modelo" />
+                    <Entry x:Name="ModeloBoxSE" Placeholder="Escribir Modelo" />
+
+                    <Label Text="Año" />
+                    <Entry x:Name="AnioBoxSE" Placeholder="Escribir Año" Keyboard="Numeric"/>
+
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="2" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Label Text="Placa" />
+                    <Entry x:Name="PlacaBoxSE"  Placeholder="Escribir No. de placa" />
+
+                    <Label Text="Velocidad Máxima" />
+                    <Entry x:Name="VelocidadMaxBoxSE" Placeholder="Escribir la Velocidad Max" Keyboard="Numeric" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="3" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+
+                    <Label Text="Puertas" />
+                    <Picker x:Name="PuertasPickerSE" SelectedIndexChanged="PuertasPickerSelectSE">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>2</x:String>
+                                <x:String>4</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Entry x:Name="PuertasBoxSE" Placeholder="Seleccionar" IsReadOnly="True" />
+
+
+                    <Label Text="Capacidad del Baul (Litros)" />
+                    <Entry x:Name="CapacidadBaulBoxSE" Placeholder="Escribir la capacidad en numeros" Keyboard="Numeric" />
+
+                </StackLayout>
+            </Frame>
+
+            <!-- Fila: Seleccionar color -->
+            <Frame Grid.Row="4" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Label Text="Selecciona un color:" />
+
+                    <Button Text="" BackgroundColor="Red" Clicked="ColorButtonClickedSE" />
+                    <Button Text="" BackgroundColor="Green" Clicked="ColorButtonClickedSE" />
+                    <Button Text="" BackgroundColor="Blue" Clicked="ColorButtonClickedSE" />
+                    <Button Text="" BackgroundColor="Yellow" Clicked="ColorButtonClickedSE" />
+                    <Button Text="" BackgroundColor="Orange" Clicked="ColorButtonClickedSE" />
+                    <Button Text="" BackgroundColor="Purple" Clicked="ColorButtonClickedSE" />
+
+                    <Label Text="Color seleccionado:" />
+                    <BoxView Color="{Binding SelectedColor}" WidthRequest="50" HeightRequest="50" />
+                    <Entry x:Name="ColorBoxSE" IsReadOnly="True" />
+
+                </StackLayout>
+            </Frame>
+
+
+            <Frame Grid.Row="5" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Button x:Name="GuardarButtonSE" Text="Guardar" Clicked="GuardarButtonClickedSE" />
+                </StackLayout>
+            </Frame>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

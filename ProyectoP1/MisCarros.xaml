@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP1.MisCarros"
+             Title="MisCarros">
+
+<ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="SELECCIONE QUE LISTA DE VEHICULOS DESEA VER"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="ver_pickups"
+                Text="PICKUP'S"
+                SemanticProperties.Hint="Crear un nuevo carro"
+                Clicked="GoToPickups"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="ver_sedans"
+                Text="SEDANS"
+                SemanticProperties.Hint="Ver mis carros"
+                Clicked="GoToSedans"
+                HorizontalOptions="Center" />
+
+
+            <Button
+                x:Name="ver_suvs"
+                Text="SUV'S"
+                SemanticProperties.Hint="Salir de la app"
+                Clicked="GoToSuvs"
+                HorizontalOptions="Center" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP1.CrearCarroPickUp"
+             Title="CrearCarroPickUp">
+    
+    <ContentPage.Content>
+        <Grid VerticalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Fila: Título -->
+            <Frame Grid.Row="0" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Label Text="CREAR NUEVO PICKUP" FontSize="34" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Fila: Marca, Modelo, Año -->
+            <Frame Grid.Row="1" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Label Text="Marca" />
+                    <Entry x:Name="MarcaBox" Placeholder="Escribir Marca" />
+
+                    <Label Text="Modelo" />
+                    <Entry x:Name="ModeloBox" Placeholder="Escribir Modelo" />
+
+                    <Label Text="Año" />
+                    <Entry x:Name="AnioBox" Placeholder="Escribir Año" Keyboard="Numeric"/>
+
+                    <Label Text="Cabina" />
+                    <Picker x:Name="CabinaPicker" SelectedIndexChanged="CabinaPickerSelect">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Doble</x:String>
+                                <x:String>Sencilla</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <Entry x:Name="CabinaBox" Placeholder="Es doble o sencilla" IsReadOnly="True" />
+
+
+                </StackLayout>
+            </Frame>
+
+            <!-- Fila: Placa, Tipo, Velocidad Máxima -->
+            <Frame Grid.Row="2" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Label Text="Placa" />
+                    <Entry x:Name="PlacaBox"  Placeholder="Escribir No. de placa" />
+
+                    <Label x:Name="Es4x4Label" Text="Es 4x4" />
+                    <Switch x:Name="Es4x4Switch" Toggled="Es4x4SwitchToggled" />
+
+                    <Label Text="Velocidad Máxima" />
+                    <Entry x:Name="VelocidadMaxBox" Placeholder="Escribir la Velocidad Max" Keyboard="Numeric" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="3" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+
+                    <Label Text="Torque (NM)" />
+                    <Entry x:Name="TorqueBox" Placeholder="Escribir solo numeros" Keyboard="Numeric"/>
+
+                    <Label Text="Carga Maxima (Kilogramos)" />
+                    <Entry x:Name="CargaBox" Placeholder="Escribir solo numeros" Keyboard="Numeric" />
+
+                    <Label x:Name="DieselLabel" Text="El motor es Diesel" />
+                    <Switch x:Name="DieselSwitch" Toggled="DieselSwitchToggled" />
+
+
+                </StackLayout>
+            </Frame>
+
+            <!-- Fila: Seleccionar color -->
+            <Frame Grid.Row="4" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Label Text="Selecciona un color:" />
+
+                    <Button Text="" BackgroundColor="Red" Clicked="ColorButtonClicked" />
+                    <Button Text="" BackgroundColor="Green" Clicked="ColorButtonClicked" />
+                    <Button Text="" BackgroundColor="Blue" Clicked="ColorButtonClicked" />
+                    <Button Text="" BackgroundColor="Yellow" Clicked="ColorButtonClicked" />
+                    <Button Text="" BackgroundColor="Orange" Clicked="ColorButtonClicked" />
+                    <Button Text="" BackgroundColor="Purple" Clicked="ColorButtonClicked" />
+
+                    <Label Text="Color seleccionado:" />
+                    <BoxView Color="{Binding SelectedColor}" WidthRequest="50" HeightRequest="50" />
+                    <Entry x:Name="ColorBox" IsReadOnly="True" />
+
+                </StackLayout>
+            </Frame>
+
+            
+            <Frame Grid.Row="5" Padding="10" Margin="20" BackgroundColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <Button x:Name="GuardarButton" Text="Guardar" Clicked="GuardarButtonClicked" />
+                </StackLayout>
+            </Frame>
+
+
+        </Grid>
+    </ContentPage.Content>
+    
+</ContentPage>

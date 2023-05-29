@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="logo.png"
+                SemanticProperties.Description="Logo de llantita"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="BIENVENIDO AL PROGRAMA"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="carros_crear"
+                Text="CREAR NUEVO CARRO"
+                SemanticProperties.Hint="Crear un nuevo carro"
+                Clicked="GoToCrearCarro"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="carros_ver"
+                Text="MIS CARROS"
+                SemanticProperties.Hint="Ver mis carros"
+                Clicked="GoToMisCarros"
+                HorizontalOptions="Center" />
+
+
+            <Button
+                x:Name="salir"
+                Text="SALIR DE LA APLICACION"
+                SemanticProperties.Hint="Salir de la app"
+                Clicked="ExitButton"
+                HorizontalOptions="Center" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

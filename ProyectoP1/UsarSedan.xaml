@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP1.UsarSedan"
+             Title="UsarSedan">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" /> 
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label  Text="ID:" Grid.Row="0" FontSize="16" />
+        <Label x:Name="lblId" Grid.Row="0" Grid.Column="1" FontSize="16" />
+
+        <Label Text="Marca:" Grid.Row="1" FontSize="16"/>
+        <Label x:Name="lblMarca" Grid.Row="1" Grid.Column="1" FontSize="16"/>
+
+        <Label Text="Modelo:" Grid.Row="2" FontSize="16"/>
+        <Label x:Name="lblModelo" Grid.Row="2" Grid.Column="1" FontSize="16"/>
+
+        <Label Text="Puertas:" Grid.Row="4" FontSize="16"/>
+        <Label x:Name="lblPuertas" Grid.Row="6" Grid.Column="1" FontSize="16"/>
+
+        <Label Text="Baul:" Grid.Row="5" FontSize="16"/>
+        <Label x:Name=" lblBaul" Grid.Row="7" Grid.Column="1" FontSize="16"/>
+
+        <StackLayout Orientation="Horizontal" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3">
+            <Image Source="pickup.png" WidthRequest="600" HeightRequest="300" />
+
+            <StackLayout Orientation="Vertical">
+                <Button x:Name="ButtonAcelerarSE" Text="Acelerar" Clicked="ButtonAcelerarClickSE"/>
+                <Button x:Name="ButtonFrenarSE" Text="Frenar"  Clicked="ButtonFrenarClickSE"/>
+                <Button x:Name="ButtonBocinarSE" Text="Tocar Bocina"  Clicked="ButtonBocinaClickSE"/>
+                <Button x:Name="ButtonEncenderSE" Text="Encender"  Clicked="ButtonEncenderClickSE"/>
+                <Button x:Name="ButtonApagarSE" Text="Apagar"  Clicked="ButtonApagarClickSE" />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+    
+</ContentPage>
